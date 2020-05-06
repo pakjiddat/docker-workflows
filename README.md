@@ -8,7 +8,7 @@ The main idea behind the workflow is to keep the application source code on the 
 
 ### Usage
 
-- [Guide for creating LAMP applications](https://github.com/pakjiddat/docker-workflows/tree/master/lamp)
-- [Guide for creating Ionic applications](https://github.com/pakjiddat/docker-workflows/tree/master/ionic)
-- [Guide for creating NodeJs applications](https://github.com/pakjiddat/docker-workflows/tree/master/nodejs)
-- [Guide for creating R applications](https://github.com/pakjiddat/r-env/tree/master/r-env)
+- [Guide for creating LAMP applications](https://github.com/pakjiddat/docker-workflows/tree/master/lamp/docs)
+- [Guide for creating Ionic applications](https://github.com/pakjiddat/docker-workflows/tree/master/ionic/docs)
+- [Guide for creating NodeJs applications](https://github.com/pakjiddat/docker-workflows/tree/master/nodejs/docs)
+- [Guide for creating R applications](https://github.com/pakjiddat/r-env/tree/master/r-env/docs)
