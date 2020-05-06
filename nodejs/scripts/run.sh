@@ -1,0 +1,1 @@
+sudo docker run --cap-add=NET_ADMIN -d -it --name nodejs-apps --mount type=bind,source="/home/nadir/Projects/nodejs/source",target="/home/nodejs/projects" -p 8000:8000 --hostname="nodejs.pakjiddat.pk" nodejs:1.0

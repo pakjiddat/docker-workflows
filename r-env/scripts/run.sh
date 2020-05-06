@@ -1,0 +1,1 @@
+sudo docker run --cap-add=NET_ADMIN -d -it --name r-env --mount type=bind,source="/home/nadir/Projects/r-env/source",target="/home/ruser/projects" -p 8787:8787 -p 4242:4242 -p 443:443 --hostname="r-env.pakjiddat.pk" r-env:1.0 
