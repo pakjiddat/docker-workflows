@@ -16,7 +16,7 @@ Pull the image from Docker Hub using the command:
 sudo docker pull pakjiddat/lamp:1.0
 ```
 
-Download the [lamp directory structure file](https://raw.githubusercontent.com/pakjiddat/docker-workflows/master/lamp/lamp.tar.gz). Unzip the contents of the file. Rename the folder to lamp. It contains folders for Apache virtual host configuration, application source code and MySQL data. It also contains scripts for running a container from the image, starting, stopping container and backing up container data.
+Download the [lamp directory structure file](https://raw.githubusercontent.com/pakjiddat/docker-workflows/master/lamp/backup/lamp.tar.gz). Unzip the contents of the file. Rename the folder to lamp. It contains folders for Apache virtual host configuration, application source code and MySQL data. It also contains scripts for running a container from the image, starting, stopping container and backing up container data.
 
 Before running a script in the **scripts** folder change the environment variables defined at the top of the script file.
 

@@ -2,11 +2,13 @@ ionic/source/*
 !ionic/source/dummy.txt
 ionic/backup/*
 !ionic/backup/dummy.txt
+!ionic/backup/ionic.tar.gz
 
 lamp/public_html/*
 !lamp/public_html/dummy.txt
 lamp/backup/*
 !lamp/backup/dummy.txt
+!lamp/backup/lamp.tar.gz
 lamp/mysql_data/*
 !lamp/mysql_data/dummy.txt
 lamp/sites-available/*
@@ -16,10 +18,12 @@ lamp/sites-enabled/*
 
 nodejs/backup/*
 !nodejs/backup/dummy.txt
+!nodejs/backup/nodejs.tar.gz
 nodejs/source/*
 !nodejs/source/dummy.txt
 
 r-env/backup/*
 !r-env/backup/dummy.txt
+!r-env/backup/r-env.tar.gz
 r-env/source/*
 !r-env/source/dummy.txt

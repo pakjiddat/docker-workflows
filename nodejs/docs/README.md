@@ -16,7 +16,7 @@ Pull the image from Docker Hub using the command:
 sudo docker pull pakjiddat/nodejs:[tag-name]
 ```
 
-Download the [nodejs directory structure file](https://raw.githubusercontent.com/pakjiddat/docker-workflows/master/lamp/nodejs.tar.gz). Unzip the contents of the file. Rename the folder to nodejs. It contains folders for application source code, documentation, data backup and scripts.
+Download the [nodejs directory structure file](https://raw.githubusercontent.com/pakjiddat/docker-workflows/master/nodejs/backup/nodejs.tar.gz). Unzip the contents of the file. Rename the folder to nodejs. It contains folders for application source code, documentation, data backup and scripts.
 
 Before running a script in the **scripts** folder change the environment variables defined at the top of the script file.
 

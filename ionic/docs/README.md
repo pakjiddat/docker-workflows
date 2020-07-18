@@ -15,7 +15,7 @@ Pull the image from Docker Hub using the command:
 sudo docker pull pakjiddat/ionic-framework:[tag-name]
 ```
 
-Download the [ionic directory structure file](https://raw.githubusercontent.com/pakjiddat/docker-workflows/master/ionic/ionic.tar.gz). Unzip the contents of the file. Rename the folder to ionic. It contains folders for application source code, documentation and scripts.
+Download the [ionic directory structure file](https://raw.githubusercontent.com/pakjiddat/docker-workflows/master/ionic/backup/ionic.tar.gz). Unzip the contents of the file. Rename the folder to ionic. It contains folders for application source code, documentation and scripts.
 
 Before running a script in the **scripts** folder change the environment variables defined at the top of the script file.
 

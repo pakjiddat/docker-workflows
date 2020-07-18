@@ -16,7 +16,7 @@ Pull the image from Docker Hub using the command:
 sudo docker pull pakjiddat/r-env:[tag-name]
 ```
 
-Download the [r-env directory structure file](https://raw.githubusercontent.com/pakjiddat/docker-workflows/master/r-env/r-env.tar.gz). Unzip the contents of the file. Rename the folder to r-env. It contains folders for application source code, data backup and an E-Book on R Programming. It also contains scripts for running a container from the image, starting, stopping container and backing up container data.
+Download the [r-env directory structure file](https://raw.githubusercontent.com/pakjiddat/docker-workflows/master/r-env/backup/r-env.tar.gz). Unzip the contents of the file. Rename the folder to r-env. It contains folders for application source code, data backup and an E-Book on R Programming. It also contains scripts for running a container from the image, starting, stopping container and backing up container data.
 
 Before running a script in the **scripts** folder change the environment variables defined at the top of the script file
 
