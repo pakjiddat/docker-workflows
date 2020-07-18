@@ -16,45 +16,31 @@ Pull the image from Docker Hub using the command:
 sudo docker pull pakjiddat/r-env:[tag-name]
 ```
 
-Create a working directory on your host computer. This will contain the source code for your R app
+Download the [r-env directory structure file](https://raw.githubusercontent.com/pakjiddat/docker-workflows/master/r-env/r-env.tar.gz). Unzip the contents of the file. Rename the folder to r-env. It contains folders for application source code, data backup and an E-Book on R Programming. It also contains scripts for running a container from the image, starting, stopping container and backing up container data.
 
-Run a Docker container based on the downloaded image by using following command:
+Before running a script in the **scripts** folder change the environment variables defined at the top of the script file
+
+Run a Docker container based on the downloaded image by running following command in the **r-env/scripts folder**:
 
 ```bash
-sudo docker run --cap-add=NET_ADMIN -d -it --name --[container-name] --mount type=bind,source="[working-dir-on-host]",target="/home/ruser/projects" -p 8787:8787 -p 4242:4242 -p 443:443 --hostname="[host-name]" r-env:3.6.3
+./run.sh
 ```
 
-- **working-dir-on-host** is the absolute path to working directory on host
-
-- **host-name** is the host name you enter in the web browse to test your app
-
-- **image-name** is the name of the image downloaded from this repository. The image name can be found using:
-
-  ```bash
-  sudo docker images --all
-  ```
-
-Login to the newly created container using the command:
+Login to the newly created container by running the following command in the **r-env/scripts folder**:
 
 ```bash
-sudo docker exec -it [container-name] /bin/bash
+./cli.sh
 ```
 
 Run RStudio server:
 
 ```bash
-sudo docker exec -it [container-name] bash  -c "service rstudio-server start"
-
-Or run the **run_site.sh** script in the **scripts** folder
+./run_site.sh
 ```
 
-You should now be able to access your R app from the browser using the address: **http://[container-ip]:8787** or **http://localhost:8787**
+You should now be able to access R Studio from the browser using the address: **http://[container-ip]:8787** or **http://localhost:8787**
 
-If the host name of your app is not localhost, then your need to enter the host name in the **/etc/hosts** file on your computer
-
-You should now be able to edit the source code for your app from a code editor installed on your host computer
-
-You may commit the source code for your app to a Git version control repository
+You may change the host name from localhost to some other hostname, by entering the host name in the **/etc/hosts** file on your computer
 
 The scripts folder contains script files for performing common tasks. Following script files are provided:
 

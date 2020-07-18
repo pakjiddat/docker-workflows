@@ -1,1 +1,2 @@
-sudo tar -cvzf backup/nodejs-backup.tar.gz  .
+sudo tar -cvzf ../nodejs-backup.tar.gz  .
+mv ../nodejs-backup.tar.gz backup/

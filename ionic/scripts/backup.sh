@@ -1,1 +1,2 @@
-sudo tar -cvzf backup/ionic-backup.tar.gz  .
+sudo tar -cvzf ../ionic-backup.tar.gz  .
+mv ../ionic-backup.tar.gz backup/ 

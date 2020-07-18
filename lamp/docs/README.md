@@ -1,11 +1,11 @@
 ### Overview:
-This repository provides an installation of the LAMP (Linux, Apache, MySQL and Php) stack. It can be used to develop applications based on LAMP.
+This repository provides an installation of the LAMP (Linux, Apache, MySQL and Php) stack. It can be used to develop applications based on LAMP stack.
 
 The image in this repository provides an easy to use environment for developing LAMP applications. The source code for your application, the MySQL data and virtual host configuration files are all stored on the host computer. The container created from the image runs independently from your application.
 
 The Docker image runs Debian Buster. it provides Apache version 2.4.38, MariaDb server version 10.3.22 and Php version 7.4.4. The Apache configuration folder, MySQL data folder and public_html folders are all mounted as [docker bind mounts](https://docs.docker.com/storage/bind-mounts/). This allows separation of development environment from the application source code.
 
-Post all related issues to the [GitHub Repository](https://github.com/pakjiddat/docker-workflows)
+Post all related issues to the [GitHub Repository](https://github.com/pakjiddat/docker-workflows).
 
 ### Usage:
 To use the image, follow these steps:
@@ -13,25 +13,23 @@ To use the image, follow these steps:
 Pull the image from Docker Hub using the command:
 
 ```bash
-sudo docker pull pakjiddat/lamp:[tag-name]
+sudo docker pull pakjiddat/lamp:1.0
 ```
 
-Download the [lamp backup file](https://raw.githubusercontent.com/pakjiddat/docker-workflows/master/lamp/lamp-backup.zip). Unzip the contents of the file. Rename the folder to lamp. It contains folders for Apache virtual host configuration, application source code and MySQL data. It also contains scripts for running a container from the image, starting, stopping container and backing up container data
+Download the [lamp directory structure file](https://raw.githubusercontent.com/pakjiddat/docker-workflows/master/lamp/lamp.tar.gz). Unzip the contents of the file. Rename the folder to lamp. It contains folders for Apache virtual host configuration, application source code and MySQL data. It also contains scripts for running a container from the image, starting, stopping container and backing up container data.
 
-Run a Docker container based on the downloaded image by using following command:
+Before running a script in the **scripts** folder change the environment variables defined at the top of the script file.
+
+Run a Docker container based on the downloaded image by running following command in the **lamp/scripts folder**:
 
 ```bash
-sudo docker run -d -it --name [container-name] --mount type=bind,source="[path-to-lamp-folder]/public_html",target="/var/www/html" --mount type=bind,source="[path-to-lamp-folder]/sites-available",target="/etc/apache2/sites-available" --mount type=bind,source="[path-to-lamp-folder]/sites-enabled",target="/etc/apache2/sites-enabled" --mount type=bind,source="[path-to-lamp-folder]/backup",target="/var/www/backup" --mount type=bind,source="[path-to-lamp-folder]/mysql_data",target="/var/lib/mysql" -p 80:80 --hostname="[host-name]" pakjiddat/lamp:[tag-name]
+./run.sh
 ```
 
-- **container-name** is the name of the container that is created from the Docker image. Set it to lamp-apps
-- **path-to-lamp-folder** is the absolute path to the lamp folder mentioned above
-- **host-name** is the host name for your container
-
-Login to the newly created container using the command:
+Login to the newly created container by running the following command in the **lamp/scripts folder**:
 
 ```bash
-sudo docker exec -it [container-name] /bin/bash
+./cli.sh
 ```
 
 Set MySQL root user password using the command:

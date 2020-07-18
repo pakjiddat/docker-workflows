@@ -1,1 +1,3 @@
-sudo docker commit ionic ionic-framework:5.0.1
+export $repo_name="ionic-framework:5.0.1"
+
+sudo docker commit ionic $repo_name
