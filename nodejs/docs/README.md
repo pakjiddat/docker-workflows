@@ -1,7 +1,7 @@
 ### Overview:
 This repository provides an installation of NodeJs. It can be used to develop applications based on NodeJs. The NodeJs installation can be managed using NVM.
 
-The version of NodeJs is indicated in the image tag. For example the image: **pakjiddat/nodejs:12.16.1** provides NodeJs version 12.19.0. The image is based on Debian v10 (Buster).
+The version of NodeJs is indicated in the image tag. For example the image: **pakjiddat/nodejs:12.19.0** provides NodeJs version 12.19.0. The image is based on Debian v10 (Buster).
 
 The image in this repository provides an easy to use environment for developing NodeJs applications. The source code for your app is stored on the host computer. The container created from the image runs independently from your NodeJs application. It can be stopped and removed without affecting the application source code.
 
